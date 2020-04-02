@@ -24,19 +24,10 @@ int main()
 }
 int strcmp(char *p1, char *p2)
 {
-    for (; *p1 != '\0' && *p2 != '\0'; p1++, p2++)
+    for (; *p1 != '\0' || *p2 != '\0'; p1++, p2++)
     {
         if (*p1 != *p2)
-        {
-            if (*p1 > *p2)
-            {
-                return (*p1 - *p2);
-            }
-            else
-            {
-                return (*p1 - *p2);
-            }
-        }
+            return (*p1 - *p2);
     }
     return 0;
 }
