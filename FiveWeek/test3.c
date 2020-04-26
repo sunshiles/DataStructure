@@ -9,6 +9,7 @@ struct student
 void main()
 {
     struct student a, b, c, *head, *p;
+    void print(struct student * head);
     a.num = 10101;
     a.score = 89.5;
     b.num = 10102;
@@ -19,6 +20,11 @@ void main()
     a.next = &b;
     b.next = &c;
     c.next = NULL;
+    print(head);
+}
+void print(struct student *head)
+{
+    struct student *p;
     p = head;
     do
     {
